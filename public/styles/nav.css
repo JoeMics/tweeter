@@ -1,13 +1,11 @@
 nav {
   height: 120px;
   width: 100vw;
-  background-color: #4056A1;
+  background-color: #022B3A;
   color: #FFFFFF;
   padding: 0 1.5em;
   display: flex;
   justify-content: space-between;
-  z-index: 2;
-  position: absolute;
 }
 
 .logo {

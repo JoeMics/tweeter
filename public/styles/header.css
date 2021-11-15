@@ -1,0 +1,10 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  background-color: #1F7A8C;
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+}
+
