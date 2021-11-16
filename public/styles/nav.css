@@ -10,15 +10,19 @@ nav {
   top: 0;
 }
 
+nav>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo {
   font-family: 'Bungee', cursive;
   align-self: center;
   font-size: 3rem;
 }
 
-nav>div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.fa-angle-double-down {
+  color: #F64740;
 }
