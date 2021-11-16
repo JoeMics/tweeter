@@ -10,3 +10,12 @@ header {
   color: #FFFFFF;
 }
 
+/* overrides default  */
+h2 {
+  font-weight: 100;
+}
+
+em {
+  font-style: normal;
+  font-weight: 600;
+}
