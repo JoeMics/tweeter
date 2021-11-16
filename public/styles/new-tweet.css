@@ -1,3 +1,9 @@
 .new-tweet form {
+  display: flex;
+  flex-direction: column;
+}
 
+.form-stats {
+  display: flex;
+  justify-content: space-between;
 }
