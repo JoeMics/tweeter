@@ -8,15 +8,25 @@
   flex-direction: column;
 }
 
+/* Tweet Submit, and word counter */
 .form-stats {
   display: flex;
   justify-content: space-between;
   padding-top: 0.5em;
+  font-family: 'Bungee', cursive;
 }
 
 textarea {
   border: 0;
   border-bottom: 4px #545149 solid;
+  outline: 0;
   background-color: transparent;
   height: 1.5em;
+}
+
+button {
+  border: 0;
+  border-radius: 2px;
+  background-color: #022B3A;
+  color: #FFFFFF;
 }
