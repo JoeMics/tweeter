@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $('#tweet-text').on('input', function(e) {
+  $('#tweet-text').on('input', function() {
     const charLimit = 140;
     const charCount = $(this).val().length;          // the length of textarea text
 
