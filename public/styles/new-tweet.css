@@ -30,3 +30,8 @@ button {
   background-color: #022B3A;
   color: #FFFFFF;
 }
+
+/* Changes colour to red when over text limit */
+.over-limit {
+  color: #F64740;
+}
