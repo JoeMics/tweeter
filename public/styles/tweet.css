@@ -47,10 +47,11 @@
 .tweet {
   border: 4px solid #545149;
   font-weight: bold;
+  transition: 0.1s linear;
 }
 
 .tweet:hover {
-  box-shadow: 5px 5px 1px;
+  box-shadow: 5px 5px 1px #54514991;
 }
 
 .handle {
