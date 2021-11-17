@@ -23,7 +23,7 @@ $(document).ready(() => {
         <img src="${user.avatars}" alt="profile icon">
         <h3>${user.name}</h3>
       </div>
-        <span class="handle">@${user.handle}</span>
+        <span class="handle">${user.handle}</span>
     </header>
       <p>${content.text}</p>
     <footer>
