@@ -24,7 +24,7 @@
   align-items: center;
 }
 
-.tweet .handle {
+.handle {
   align-self: center;
 }
 
@@ -45,7 +45,13 @@
   font-weight: bold;
 }
 
+.handle {
+  font-size: 2rem;
+
+}
+
 .tweet footer {
   border-top: 4px solid #545149 ;
+  font-size: 1.25rem;
 }
 
