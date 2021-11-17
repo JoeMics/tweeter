@@ -5,11 +5,16 @@
   height: 120px;
 }
 
-/* Alignment */
+/* Alignment and positioning */
 .tweet header,
 .tweet footer {
   display: flex;
   justify-content: space-between;
+}
+
+.tweet {
+  margin: 1em 1em 0 1em;
+  padding: 1em;
 }
 
 .tweet .left {
@@ -17,4 +22,20 @@
   align-items: center;
 }
 
+.tweet p {
+  margin: 1.5em 0;
+}
+
+.tweet footer {
+  padding-top: 1em;
+}
+
 /* Fonts, borders, colours etc */
+.tweet {
+  border: 1px solid black;
+}
+
+.tweet footer {
+  border-top: 2px black solid;
+}
+
