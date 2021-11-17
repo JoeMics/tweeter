@@ -1,0 +1,20 @@
+/* Tweet Container */
+
+/* limit tweet image size to 120px */
+.tweet img {
+  height: 120px;
+}
+
+/* Alignment */
+.tweet header,
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet .left {
+  display: flex;
+  align-items: center;
+}
+
+/* Fonts, borders, colours etc */
