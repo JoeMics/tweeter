@@ -16,6 +16,9 @@ $(document).ready(() => {
       created_at: createdAt   // time created in Unix time
     } = tweetObject;
 
+    // Converts time to "x 'days/months/years' ago", using timeago library
+    const formattedTime = timeago.format(createdAt);
+
     return $(`
     <article class="tweet">
     <header>
@@ -27,7 +30,7 @@ $(document).ready(() => {
     </header>
       <p>${content.text}</p>
     <footer>
-      <span class="date">${createdAt}</span>
+      <span class="date">${formattedTime}</span>
       <div>
         <i class="fas fa-flag"></i>
         <i class="fas fa-retweet"></i>
@@ -56,6 +59,6 @@ $(document).ready(() => {
 
   // Test / driver code (temporary)
   console.log($tweet); // to see what it looks like
-  $('.tweets').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  $('.tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 });
