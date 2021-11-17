@@ -6,11 +6,6 @@
 /* Alignment and positioning */
 /*****************************/
 
-/* limit tweet image size to 120px */
-.tweet img {
-  height: 120px;
-}
-
 /* Creates space in the middle of header and footer */
 .tweet header,
 .tweet footer {
