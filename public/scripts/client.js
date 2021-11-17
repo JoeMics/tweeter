@@ -91,7 +91,8 @@ $(document).ready(() => {
     event.preventDefault();
 
     // extract form data
-    const formInput = $(this).find('textarea').val();
+    // turns form data into: text=somevalue
+    const serlalizedInput = $(this).serialize();
 
     // send AJAX post request to server
 
