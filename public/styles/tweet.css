@@ -34,7 +34,11 @@
 }
 
 .tweet footer {
-  padding-top: 1em;
+  padding: 1em 1em 0 1em;
+}
+
+.tweet footer i {
+  padding: 0 0.5em;
 }
 
 /*                             */
