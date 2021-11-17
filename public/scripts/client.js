@@ -46,6 +46,7 @@ $(document).ready(() => {
     // Converts time to "x 'days/months/years' ago", using timeago library
     const formattedTime = timeago.format(createdAt);
 
+    // returns the element as a jquery element
     return $(`
     <article class="tweet">
     <header>
@@ -79,6 +80,22 @@ $(document).ready(() => {
       $('.tweets-container').append($tweet);
     });
   };
+
+  /* *************** */
+  // EVENT HANDLERS  //
+  /* *************** */
+
+  // handles new tweet creation form submission
+  $('.new-tweet form').submit(function(event) {
+    // prevents refreshing of page
+    event.preventDefault();
+
+    // extract form data
+    const formInput = $(this).find('textarea').val();
+
+    // send AJAX post request to server
+
+  });
 
   // runner code for debugging
   renderTweets(data);
