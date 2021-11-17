@@ -5,7 +5,9 @@
   height: 120px;
 }
 
+/*                           */
 /* Alignment and positioning */
+/*                           */
 .tweet header,
 .tweet footer {
   display: flex;
@@ -23,14 +25,17 @@
 }
 
 .tweet p {
-  margin: 1.5em 0;
+  margin: 2em 0;
+  padding: 0 1.5em;
 }
 
 .tweet footer {
   padding-top: 1em;
 }
 
+/*                             */
 /* Fonts, borders, colours etc */
+/*                             */
 .tweet {
   border: 4px solid #545149;
 }
