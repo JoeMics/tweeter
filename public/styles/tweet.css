@@ -59,3 +59,11 @@
   font-size: 1.25rem;
 }
 
+.tweet i {
+  color: #654C4F;
+}
+
+.tweet i:hover {
+  cursor: pointer;
+  color: #2F2324;
+}
