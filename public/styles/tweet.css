@@ -24,6 +24,10 @@
   align-items: center;
 }
 
+.tweet .handle {
+  align-self: center;
+}
+
 .tweet p {
   margin: 2em 0;
   padding: 0 1.5em;
@@ -38,6 +42,7 @@
 /*                             */
 .tweet {
   border: 4px solid #545149;
+  font-weight: bold;
 }
 
 .tweet footer {
