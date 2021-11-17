@@ -49,6 +49,10 @@
   font-weight: bold;
 }
 
+.tweet:hover {
+  box-shadow: 5px 5px 1px;
+}
+
 .handle {
   font-size: 2rem;
   color: #DDB967;
