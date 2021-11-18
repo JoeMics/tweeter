@@ -1,14 +1,18 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 // This code only runs when the whole HTML is rendered by the client
 $(document).ready(() => {
   /*************/
   // FUNCTIONS //
   /*************/
+
+  // Function that escapes text, Prevents XSS
+  const escape = function(str) {
+    // creates empty div
+    let div = document.createElement("div");
+    // adds in potentially harmful string to div as a text node
+    div.appendChild(document.createTextNode(str));
+    // only return the contents of the text node
+    return div.innerHTML;
+  };
   
   // Function takes a tweet object, returns the <article> containing tweet HTML
   const createTweetElement = function(tweetObject) {
@@ -32,7 +36,7 @@ $(document).ready(() => {
       </div>
         <span class="handle">${user.handle}</span>
     </header>
-      <p>${content.text}</p>
+      <p>${escape(content.text)}</p>
     <footer>
       <span class="date">${formattedTime}</span>
       <div>
