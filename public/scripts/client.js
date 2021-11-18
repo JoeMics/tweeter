@@ -71,6 +71,8 @@ $(document).ready(() => {
       });
   };
 
+  // Function that validates form
+
   /* *************** */
   // EVENT HANDLERS  //
   /* *************** */
@@ -79,6 +81,10 @@ $(document).ready(() => {
   $('.new-tweet form').submit(function(event) {
     // prevents refreshing of page
     event.preventDefault();
+    
+    // extract input to validate before serialization
+    const formInput = $(this).find('textarea').val();
+
 
     // extract form data
     // turns form data into: text=somevalue
