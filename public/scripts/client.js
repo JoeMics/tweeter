@@ -72,6 +72,22 @@ $(document).ready(() => {
   };
 
   // Function that validates form
+  // returns an error message, or null if input is okay
+  const validateForm = function(input) {
+    // checks to make sure the input is not empty, or empty spaces
+    if (!input.length || !input.trim()) {
+      return 'Tweet must contain text';
+    }
+
+    // checks the character limit of input
+    const characterLimit = 140;
+    if (input.length > characterLimit) {
+      return 'Your tweet exceeds the maximum character limit';
+    }
+
+    // returns null if input is valid
+    return null;
+  };
 
   /* *************** */
   // EVENT HANDLERS  //
@@ -84,7 +100,10 @@ $(document).ready(() => {
     
     // extract input to validate before serialization
     const formInput = $(this).find('textarea').val();
-
+    const errorMessage = validateForm(formInput);
+    if (errorMessage) {
+      return alert(errorMessage);
+    }
 
     // extract form data
     // turns form data into: text=somevalue
