@@ -52,8 +52,8 @@ $(document).ready(() => {
       // take the json data, and add them to tweet html
       const $tweet = createTweetElement(tweet);
 
-      // append it to the tweet container
-      $('.tweets-container').append($tweet);
+      // prepend it to the tweet container
+      $('.tweets-container').prepend($tweet);
     });
   };
 
@@ -111,6 +111,9 @@ $(document).ready(() => {
 
     // send AJAX post request to server
     $.ajax('/tweets', { method: 'POST', data: serlalizedInput });
+
+    // renders tweet on the page after submission
+    loadTweets();
   });
 
   // Loads tweets on start up
