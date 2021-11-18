@@ -10,30 +10,31 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+/* MODIFIED CODE BEGINS HERE */
 
-body {
-  width: 100vw;
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
+/*****************************/
+/* Alignment and Positioning */
+/*****************************/
 main {
   width: 90%;
   margin: 0 auto;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
+/* Large Desktop */
 @media (min-width: 1440px) {
   main {
     width: 60vw;
     margin-right: 5vw;
   }
+}
+
+/*********************/
+/* Fonts and colours */
+/*********************/
+
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
