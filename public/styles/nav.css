@@ -1,14 +1,19 @@
+/*****************************/
+/* Alignment and Positioning */
+/*****************************/
 nav {
   height: 120px;
   width: 100vw;
-  background-color: #022B3A;
-  color: #FFFFFF;
   padding: 0 1.5em;
   display: flex;
   justify-content: space-between;
   position: sticky;
   top: 0;
 }
+
+.logo {
+  align-self: center;
+} 
 
 nav>div,
 nav>button {
@@ -18,10 +23,23 @@ nav>button {
   align-items: center;
 }
 
+/******************************/
+/* Fonts, Colours, Animations */
+/******************************/
+
+nav {
+  background-color: #022B3A;
+  color: #FFFFFF;
+}
+
 .logo {
   font-family: 'Bungee', cursive;
-  align-self: center;
   font-size: 3rem;
+}
+
+/* Styles for the Create Tweet button */
+nav>button {
+  cursor: pointer;
 }
 
 .fa-angle-double-down {
