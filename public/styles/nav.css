@@ -10,7 +10,8 @@ nav {
   top: 0;
 }
 
-nav>div {
+nav>div,
+nav>button {
   display: flex;
   flex-direction: column;
   justify-content: center;
