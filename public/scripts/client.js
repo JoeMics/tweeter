@@ -108,11 +108,13 @@ $(document).ready(() => {
     const $formInput = $(this).find('textarea');
     const errorMessage = validateForm($formInput.val());
     if (errorMessage) {
-      // create span element with error message
-      let $error = $('<span></span>').text(errorMessage);
-      // add "error" styles to error element
-      $error.addClass('error');
+      // create span element with "error" styles
+      let $error = $('<span></span>').addClass('error');
+      // add error message
+      $error.text(errorMessage);
 
+      // if error message is present, just replace it
+      $('span.error').replaceWith($error);
       return $formInput.after($error);
     }
 
