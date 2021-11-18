@@ -136,8 +136,9 @@ $(document).ready(() => {
     sendTweet.then(() => {
       // renders tweet on the page after submission
       loadTweets();
-      // clear the textarea afterwards
-      $($formInput).val(null);
+      // clear the textarea, reset counter
+      $($formInput).val('');
+      $($formInput).trigger('input');
     });
   });
 
