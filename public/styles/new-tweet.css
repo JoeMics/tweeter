@@ -31,7 +31,9 @@ button {
   color: #FFFFFF;
 }
 
-/* Changes colour to red when over text limit */
-.over-limit {
+/* Changes colour to red when over text limit or on error messages */
+.over-limit,
+.error {
   color: #F64740;
+  font-weight: bold;
 }
