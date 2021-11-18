@@ -1,3 +1,7 @@
+/*****************************/
+/* Alignment and Positioning */
+/*****************************/
+
 body>header {
   height: 400px;
   width: 100%;
@@ -5,12 +9,23 @@ body>header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #DDB967;
-  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-  color: #FFFFFF;
 }
 
-/* overrides default  */
+/* Large Desktop */
+@media (min-width: 1440px) {
+  body>header {
+    max-width: 400px;
+    position: fixed;
+    top: 25%;
+    left: 8%;
+  }
+}
+
+/***********************/
+/* Fonts, colours etc. */
+/***********************/
+
+/* overrides default styles for h2 and em*/
 h2 {
   font-weight: 100;
 }
@@ -18,4 +33,10 @@ h2 {
 em {
   font-style: normal;
   font-weight: 600;
+}
+
+body>header {
+  background-color: #DDB967;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  color: #FFFFFF;
 }

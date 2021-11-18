@@ -30,3 +30,10 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+@media (min-width: 1440px) {
+  main {
+    width: 60vw;
+    margin-right: 5vw;
+  }
+}
