@@ -132,21 +132,21 @@ $(document).ready(() => {
     const serlalizedInput = $(this).serialize();
 
     // send AJAX post request to server
-    $.ajax('/tweets', { method: 'POST', data: serlalizedInput });
-
-    // clear the textarea aft
-    $($formInput).val(null);
-    // renders tweet on the page after submission
-    loadTweets();
+    const sendTweet = $.ajax('/tweets', { method: 'POST', data: serlalizedInput });
+    sendTweet.then(() => {
+      // renders tweet on the page after submission
+      loadTweets();
+      // clear the textarea afterwards
+      $($formInput).val(null);
+    });
   });
 
   // Event handler to show or hide new tweet form
+  $('.new-tweet form').hide();
   $('nav button').on('click', () => {
     $('.new-tweet form').slideToggle();
   });
-
-
-  $('.new-tweet form').hide();
+  
   // Loads tweets on start up
   loadTweets();
 });
