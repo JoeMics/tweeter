@@ -99,8 +99,8 @@ $(document).ready(() => {
     event.preventDefault();
     
     // extract input to validate before serialization
-    const formInput = $(this).find('textarea').val();
-    const errorMessage = validateForm(formInput);
+    const formInput = $(this).find('textarea');
+    const errorMessage = validateForm(formInput.val());
     if (errorMessage) {
       return alert(errorMessage);
     }
@@ -113,6 +113,7 @@ $(document).ready(() => {
     $.ajax('/tweets', { method: 'POST', data: serlalizedInput });
 
     // renders tweet on the page after submission
+    $(formInput).val(null);
     loadTweets();
   });
 
