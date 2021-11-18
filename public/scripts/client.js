@@ -140,8 +140,13 @@ $(document).ready(() => {
     loadTweets();
   });
 
+  // Event handler to show or hide new tweet form
+  $('nav button').on('click', () => {
+    $('.new-tweet form').slideToggle();
+  });
 
 
+  $('.new-tweet form').hide();
   // Loads tweets on start up
   loadTweets();
 });
