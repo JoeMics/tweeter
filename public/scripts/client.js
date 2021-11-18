@@ -63,6 +63,8 @@ $(document).ready(() => {
     // Should receive an array of tweets in JSON
     $.ajax('/tweets')
       .then(data => {
+        // if there are already tweets in the container, remove them
+        $('.tweets-container').html(null);
         // calls render Tweets to update the web page
         renderTweets(data);
       })
@@ -112,8 +114,9 @@ $(document).ready(() => {
     // send AJAX post request to server
     $.ajax('/tweets', { method: 'POST', data: serlalizedInput });
 
-    // renders tweet on the page after submission
+    // clear the textarea aft
     $(formInput).val(null);
+    // renders tweet on the page after submission
     loadTweets();
   });
 
