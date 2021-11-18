@@ -104,8 +104,15 @@ $(document).ready(() => {
     // prevents refreshing of page
     event.preventDefault();
     
+    // error message slides up, if existant
+    $('span.error').slideUp('fast',function() {
+      this.remove();
+    });
+    
     // extract input to validate before serialization
     const $formInput = $(this).find('textarea');
+    
+    // Handles form input errors, if present
     const errorMessage = validateForm($formInput.val());
     if (errorMessage) {
       // create span element with "error" styles
@@ -113,9 +120,13 @@ $(document).ready(() => {
       // add error message
       $error.text(errorMessage);
 
-      // if error message is present, just replace it
-      $('span.error').replaceWith($error);
-      return $formInput.after($error);
+      // If an error message is being displayed, replace the contents
+      if (document.querySelector('span.error')) {
+        return $('span.error').replaceWith($error);
+      }
+
+      // If there is no error message present, animate the message
+      return $error.hide().insertAfter($formInput).slideDown('fast');
     }
 
     // extract form data
@@ -130,6 +141,8 @@ $(document).ready(() => {
     // renders tweet on the page after submission
     loadTweets();
   });
+
+
 
   // Loads tweets on start up
   loadTweets();
