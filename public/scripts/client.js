@@ -95,7 +95,7 @@ $(document).ready(() => {
     const serlalizedInput = $(this).serialize();
 
     // send AJAX post request to server
-
+    $.ajax('/tweets', { method: 'POST', data: serlalizedInput });
   });
 
   // runner code for debugging
