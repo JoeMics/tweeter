@@ -145,7 +145,8 @@ $(document).ready(() => {
   // Event handler to show or hide new tweet form
   $('.new-tweet form').hide();
   $('nav button').on('click', () => {
-    $('.new-tweet form').slideToggle();
+    $('.new-tweet form').slideToggle()
+      .find('textarea').trigger('focus');
   });
   
   // Loads tweets on start up
