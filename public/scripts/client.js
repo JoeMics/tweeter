@@ -6,33 +6,9 @@
 
 // This code only runs when the whole HTML is rendered by the client
 $(document).ready(() => {
-
-  // Fake data taken from initial-tweets.json
-  // ONLY FOR DEBUGGING
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
+  /*************/
+  // FUNCTIONS //
+  /*************/
   
   // Function takes a tweet object, returns the <article> containing tweet HTML
   const createTweetElement = function(tweetObject) {
@@ -81,6 +57,20 @@ $(document).ready(() => {
     });
   };
 
+  // Function retrieves tweets from /tweets
+  const loadTweets = function() {
+    // Make Ajax GET request from /tweets
+    // Should receive an array of tweets in JSON
+    $.ajax('/tweets')
+      .then(data => {
+        // calls render Tweets to update the web page
+        renderTweets(data);
+      })
+      .catch(error => {
+        console.log("Error:", error);
+      });
+  };
+
   /* *************** */
   // EVENT HANDLERS  //
   /* *************** */
@@ -98,6 +88,6 @@ $(document).ready(() => {
     $.ajax('/tweets', { method: 'POST', data: serlalizedInput });
   });
 
-  // runner code for debugging
-  renderTweets(data);
+  // Loads tweets on start up
+  loadTweets();
 });
