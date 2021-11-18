@@ -6,7 +6,6 @@ $(document).ready(() => {
 
   // Function that escapes text, Prevents XSS
   const escape = function(str) {
-    // creates empty div
     let div = document.createElement("div");
     // adds in potentially harmful string to div as a text node
     div.appendChild(document.createTextNode(str));
@@ -117,7 +116,6 @@ $(document).ready(() => {
     if (errorMessage) {
       // create span element with "error" styles
       let $error = $('<span></span>').addClass('error');
-      // add error message
       $error.text(errorMessage);
 
       // If an error message is being displayed, replace the contents
@@ -126,7 +124,7 @@ $(document).ready(() => {
       }
 
       // If there is no error message present, animate the message
-      return $error.hide().insertAfter($formInput).slideDown('fast');
+      $error.hide().insertAfter($formInput).slideDown('fast');
     }
 
     // extract form data
