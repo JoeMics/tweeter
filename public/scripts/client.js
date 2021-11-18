@@ -124,7 +124,7 @@ $(document).ready(() => {
       }
 
       // If there is no error message present, animate the message
-      $error.hide().insertAfter($formInput).slideDown('fast');
+      return $error.hide().insertAfter($formInput).slideDown('fast');
     }
 
     // extract form data
