@@ -6,7 +6,7 @@
 .new-tweet form {
   display: flex;
   flex-direction: column;
-  padding-top: 1em;
+  padding: 2em 0;
 }
 
 /* Tweet Submit, and word counter */
