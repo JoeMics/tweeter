@@ -105,10 +105,15 @@ $(document).ready(() => {
     event.preventDefault();
     
     // extract input to validate before serialization
-    const formInput = $(this).find('textarea');
-    const errorMessage = validateForm(formInput.val());
+    const $formInput = $(this).find('textarea');
+    const errorMessage = validateForm($formInput.val());
     if (errorMessage) {
-      return alert(errorMessage);
+      // create span element with error message
+      let $error = $('<span></span>').text(errorMessage);
+      // add "error" styles to error element
+      $error.addClass('error');
+
+      return $formInput.after($error);
     }
 
     // extract form data
@@ -119,7 +124,7 @@ $(document).ready(() => {
     $.ajax('/tweets', { method: 'POST', data: serlalizedInput });
 
     // clear the textarea aft
-    $(formInput).val(null);
+    $($formInput).val(null);
     // renders tweet on the page after submission
     loadTweets();
   });
