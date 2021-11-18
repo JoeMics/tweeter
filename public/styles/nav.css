@@ -26,3 +26,7 @@ nav>div {
 .fa-angle-double-down {
   color: #F64740;
 }
+
+.fa-angle-double-down:hover {
+  transform: translateY(5px);
+}
