@@ -15,9 +15,13 @@ The purpose of this project to improve on my front-end technologies such as **HT
 
 This application was developed mobile-first. The responsive layout is based on the [Column Drop](https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns#column_drop) pattern.
 
-## Preview 
-[Large Desktop View]()
-[Tablet View]()
+## Screenshots 
+### Desktop
+![Large Desktop View](./docs/tweeter-desktop.png)
+### Tablet
+![Tablet View](./docs/tweeter-tablet.png)
+### Mobile
+![Mobile View](./docs/tweeter-mobile.png)
 
 ## Getting Started
 
