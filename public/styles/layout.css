@@ -20,6 +20,13 @@ main {
   margin: 0 auto;
 }
 
+/* "Back to Top" button fixed to bottom right*/
+button.to-top {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+
 /* Large Desktop */
 @media (min-width: 1440px) {
   main {
@@ -38,3 +45,4 @@ body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
