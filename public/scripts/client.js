@@ -3,23 +3,16 @@ $(document).ready(() => {
   /*************/
   // FUNCTIONS //
   /*************/
-
-  // Function that escapes text, Prevents XSS
-  const escape = function(str) {
-    let div = document.createElement("div");
-    // adds in potentially harmful string to div as a text node
-    div.appendChild(document.createTextNode(str));
-    // only return the contents of the text node
-    return div.innerHTML;
-  };
   
   // Function takes a tweet object, returns the <article> containing tweet HTML
   const createTweetElement = function(tweetObject) {
-
+    // contains user's name, avatars, and handle
+    // the text of the tweet
+    // time created in Unix time
     const {
-      user,                   // contains user's name, avatars, and handle
-      content,                // the text of the tweet
-      created_at: createdAt   // time created in Unix time
+      user,
+      content,
+      created_at: createdAt
     } = tweetObject;
 
     // Converts time to "x 'days/months/years' ago", using timeago library
@@ -76,27 +69,9 @@ $(document).ready(() => {
       });
   };
 
-  // Function that validates form
-  // returns an error message, or null if input is okay
-  const validateForm = function(input) {
-    // checks to make sure the input is not empty, or empty spaces
-    if (!input.length || !input.trim()) {
-      return 'Tweet must contain text';
-    }
-
-    // checks the character limit of input
-    const characterLimit = 140;
-    if (input.length > characterLimit) {
-      return 'Your tweet exceeds the maximum character limit';
-    }
-
-    // returns null if input is valid
-    return null;
-  };
-
-  /* *************** */
-  // EVENT HANDLERS  //
-  /* *************** */
+  /*******************/
+  // EVENT LISTENERS //
+  /*******************/
 
   // handles new tweet creation form submission
   $('.new-tweet form').submit(function(event) {
@@ -112,6 +87,7 @@ $(document).ready(() => {
     const $formInput = $(this).find('textarea');
     
     // Handles form input errors, if present
+    // validateForm found in util.js
     const errorMessage = validateForm($formInput.val());
     if (errorMessage) {
       // create span element with "error" styles
@@ -144,15 +120,20 @@ $(document).ready(() => {
 
   // Event handler to show or hide new tweet form
   $('.new-tweet form').hide();
+
   $('nav button').on('click', () => {
-    $('.new-tweet form').slideToggle()
-      .find('textarea').trigger('focus');
+    $('.new-tweet form')
+      .slideToggle()
+      .find('textarea')
+      .trigger('focus');
   });
 
   // Event handler for button to take user to the top of the page
-  $('button.to-top').hide().on('click', () => {
-    $('html').animate({ scrollTop: 0 }, 'slow');
-  });
+  $('button.to-top')
+    .hide()
+    .on('click', () => {
+      $('html').animate({ scrollTop: 0 }, 'slow');
+    });
 
   // Event listener for the window to monitor if the user is not scrolled
   // all the way up
