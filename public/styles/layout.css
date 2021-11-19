@@ -23,8 +23,9 @@ main {
 /* "Back to Top" button fixed to bottom right*/
 button.to-top {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
 }
 
 /* Large Desktop */
@@ -38,16 +39,22 @@ button.to-top {
 /*********************/
 /* Fonts and colours */
 /*********************/
+html {
+  width: 100vw;
+}
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  /* this prevents a bug that occurs */
+  /* when the to-top button appears  */
+  overflow-x: hidden; 
 }
 
 button.to-top {
   background: transparent;
   color:#F64740;
-  font-size: 5rem;
+  font-size: 50px;
 }

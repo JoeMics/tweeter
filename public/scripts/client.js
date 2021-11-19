@@ -150,8 +150,18 @@ $(document).ready(() => {
   });
 
   // Event handler for button to take user to the top of the page
-  $('button.to-top').on('click', () => {
-    $('html, body').animate({ scrollTop: 0}, 'slow');
+  $('button.to-top').hide().on('click', () => {
+    $('html').animate({ scrollTop: 0 }, 'slow');
+  });
+
+  // Event listener for the window to monitor if the user is not scrolled
+  // all the way up
+  $(document).scroll(function() {
+    if ($(this).scrollTop()) {
+      $('button.to-top').fadeIn();
+    } else {
+      $('button.to-top').fadeOut();
+    }
   });
   
   // Loads tweets on start up
