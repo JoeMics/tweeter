@@ -1,10 +1,12 @@
 $(document).ready(() => {
   $('#tweet-text').on('input', function() {
     const charLimit = 140;
-    const charCount = $(this).val().length;          // the length of textarea text
+    // the length of textarea text
+    const charCount = $(this).val().length;
 
     const $counter = $(this).parent().find('.counter');
-    $counter.text(charLimit - charCount);           // shows user how many characters available
+    // shows user how many characters available
+    $counter.text(charLimit - charCount);
 
     // the counter becomes red when over the character limit
     if ($counter.val() < 0) {

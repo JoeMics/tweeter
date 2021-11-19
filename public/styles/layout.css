@@ -33,6 +33,12 @@ button.to-top {
     width: 60vw;
     margin-right: 5vw;
   }
+
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
 }
 
 /*********************/

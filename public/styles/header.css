@@ -18,10 +18,12 @@ body>header {
 /* Large Desktop */
 @media (min-width: 1440px) {
   body>header {
-    max-width: 400px;
+    display: flex;
     position: fixed;
-    top: 180px;
-    left: 8%;
+    top: 120px;
+    max-width: 30%;
+    height: 100%;
+    z-index: -1;
   }
 }
 
