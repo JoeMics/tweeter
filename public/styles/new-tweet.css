@@ -1,3 +1,11 @@
+/**************************/
+/* Tweet Composition Form */
+/**************************/
+
+/*****************************/
+/* Alignment and Positioning */
+/*****************************/
+
 .new-tweet {
   width: 90%;
   margin: 0 auto;
@@ -14,6 +22,17 @@
   display: flex;
   justify-content: space-between;
   padding-top: 0.5em;
+}
+
+textarea {
+  height: 1.5em;
+}
+
+/***************************/
+/* Fonts, colours, borders */
+/***************************/
+
+.form-stats {
   font-family: 'Bungee', cursive;
 }
 
@@ -22,7 +41,6 @@ textarea {
   border-bottom: 4px #545149 solid;
   outline: 0;
   background-color: transparent;
-  height: 1.5em;
 }
 
 button {
