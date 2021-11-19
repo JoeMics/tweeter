@@ -148,6 +148,11 @@ $(document).ready(() => {
     $('.new-tweet form').slideToggle()
       .find('textarea').trigger('focus');
   });
+
+  // Event handler for button to take user to the top of the page
+  $('button.to-top').on('click', () => {
+    $('html, body').animate({ scrollTop: 0}, 'slow');
+  });
   
   // Loads tweets on start up
   loadTweets();
