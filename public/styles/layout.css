@@ -23,8 +23,8 @@ main {
 /* "Back to Top" button fixed to bottom right*/
 button.to-top {
   position: fixed;
-  bottom: 1em;
-  right: 1em;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 /* Large Desktop */
@@ -46,3 +46,8 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+button.to-top {
+  background: transparent;
+  color:#F64740;
+  font-size: 5rem;
+}
