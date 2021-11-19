@@ -16,7 +16,7 @@ body>header {
   body>header {
     max-width: 400px;
     position: fixed;
-    top: 25%;
+    top: 200px;
     left: 8%;
   }
 }
