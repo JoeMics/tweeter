@@ -44,8 +44,15 @@ nav>button {
 
 .fa-angle-double-down {
   color: #F64740;
+  animation-name: arrow-hover;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-.fa-angle-double-down:hover {
-  transform: translateY(5px);
+
+@keyframes arrow-hover {
+  from {
+    transform: translateY(5px);
+  }
 }
