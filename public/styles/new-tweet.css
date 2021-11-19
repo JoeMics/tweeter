@@ -30,6 +30,7 @@ button {
   border-radius: 2px;
   background-color: #022B3A;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 /* Changes colour to red when over text limit or on error messages */

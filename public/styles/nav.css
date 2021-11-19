@@ -38,9 +38,6 @@ nav {
 }
 
 /* Styles for the Create Tweet button */
-nav>button {
-  cursor: pointer;
-}
 
 .fa-angle-double-down {
   color: #F64740;
